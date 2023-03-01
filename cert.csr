@@ -1,0 +1,26 @@
+[ req ]
+prompt                 = no
+days                   = 365
+distinguished_name     = req_distinguished_name
+req_extensions         = v3_req
+
+
+[ req_distinguished_name ]
+countryName            = BR
+stateOrProvinceName    = SAO PAULO
+localityName           = SAO PAULO
+organizationName       = VMware
+organizationalUnitName = CMBU
+commonName             = mycommname.com
+emailAddress           = emailaddress@myemail.com
+
+[ v3_req ]
+basicConstraints       = CA:false
+extendedKeyUsage       = serverAuth
+subjectAltName         = @sans
+
+[ sans ]
+DNS.0 = localhost
+DNS.1 = myexampleserver.com
+DNS.2 = LBIP
+DNS.3 = myIP
